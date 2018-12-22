@@ -10,7 +10,7 @@ module.exports.getAllUsers = function getAllUsers(req, res, next) {
 
 module.exports.download = function download(req, res, next) {
 const fs = require('fs')
-    const name = 'test';
+    const name = 'test.zip';
     var file = fs.createReadStream(__dirname + "/" + name);
     var stat = fs.statSync(__dirname + "/" + name);
     res.setHeader('Content-Length', stat.size);
