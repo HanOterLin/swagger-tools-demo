@@ -1,0 +1,95 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Passive Metering API",
+    "version": "0.0.1",
+    "title": "Passive Metering"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "user",
+      "description": "Everything about User"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "security": [],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Retrieve all Users",
+        "description": "",
+        "operationId": "getAllUsers",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Users",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "x-swagger-router-controller": "User"
+      }
+    },
+    "/download": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Retrieve all Users",
+        "description": "",
+        "operationId": "download",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/zip"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "List of Users",
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "x-swagger-router-controller": "User"
+      }
+    }
+  },
+  "securityDefinitions": {
+    "APIKeyHeader": {
+      "type": "apiKey",
+      "name": "X-ACCESS-TOKEN",
+      "in": "header"
+    }
+  }
+}

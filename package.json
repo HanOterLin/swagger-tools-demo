@@ -1,0 +1,20 @@
+{
+  "name": "swagger-tools-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "express": "^4.16.4",
+    "swagger-editor": "^3.6.19",
+    "swagger-tools": "^0.10.4",
+    "swagger-ui": "^3.20.3",
+    "swagger-ui-dist": "^3.20.3",
+    "swagger-ui-express": "^4.0.2"
+  }
+}
